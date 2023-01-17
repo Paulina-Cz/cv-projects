@@ -1,0 +1,44 @@
+.form {
+  background-color: white;
+  padding: 1rem;
+  max-width: 40rem;   
+}
+
+.form-input {
+  background-color: white;       ;
+  margin: 0.7rem 0;
+}
+
+.form-input p {
+  background-color: white;     
+  color: rgb(255, 153, 0);
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+
+.form-input label {
+  background-color: white;     
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.form-input input {
+  background-color: white;     
+  display: block;
+  width: 100%;
+  border: 0.09375rem solid #ccc;
+  border-radius: 0.4375rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5rem;
+  padding: 0 0.3rem;
+}
+
+.form-input.invalid input {
+  border-color: rgb(240, 28, 28);
+  background: #ffd7d7;
+}
+
+.form-input.invalid label {
+  color: rgb(240, 28, 28);
+}

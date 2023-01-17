@@ -1,0 +1,41 @@
+.form {
+  background-color: white;
+}
+
+.entryMessage {
+  background-color: white;
+  color: #266f80;
+  font-size: 1.563rem;
+  font-weight: 700;
+}
+
+.input {
+  margin: 2.5rem auto;
+  max-width: 40rem;
+  padding: 3rem;
+  width: 90%;
+}
+
+.input label {
+  background-color: white;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.input input {
+  background-color: white;
+  border: 0.063rem solid rgb(117, 114, 114);
+  border-radius: 0.438rem;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.6rem;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.input span {
+  color: #fa627c;
+  display: block;
+  margin: 0.5rem 0;
+}
