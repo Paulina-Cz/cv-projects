@@ -19,10 +19,10 @@ const ShoppingList = () => {
 
   const deleteShoppingItemHandler = (itemId) => {
     setShoppingItem((prevItems) => {
-      const updatedItems = prevItems.filter((item) => item.id !== itemId)
+      const updatedItems = prevItems.filter((item) => item.id !== itemId);
       return updatedItems;
-    })
-  }
+    });
+  };
 
   let content = (
     <p className={styles.p}>No shopping item found. Please add one!</p>
@@ -30,14 +30,17 @@ const ShoppingList = () => {
 
   if (shoppingItem.length > 0) {
     content = (
-      <ListWithShoppingItems items={shoppingItem} onDeleteShoppingItem={deleteShoppingItemHandler}/>
+      <ListWithShoppingItems
+        items={shoppingItem}
+        onDeleteShoppingItem={deleteShoppingItemHandler}
+      />
     );
   }
 
   return (
     <>
-      <section className={styles.shoppingFormLayout} id="shopping-form" >
-        <InputField onAddShoppingItem={addShoppingItemHandler}/>
+      <section className={styles.shoppingFormLayout} id="shopping-form">
+        <InputField onAddShoppingItem={addShoppingItemHandler} />
       </section>
       <section id="shopping-list">{content}</section>
     </>

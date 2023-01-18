@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 import styles from "./InputField.module.css";
 
 const InputField = (props) => {
-  const [input, setInput] = useState(""); 
+  const [input, setInput] = useState("");
   const [isValid, setIsValid] = useState(true);
 
   const itemInputChangeHandler = (event) => {

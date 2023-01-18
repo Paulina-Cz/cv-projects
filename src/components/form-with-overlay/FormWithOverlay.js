@@ -12,7 +12,12 @@ const FormWithOverlay = () => {
     setListOfUsers((prevListOfUsers) => {
       return [
         ...prevListOfUsers,
-        { name: userName, email: userEmail, age: userAge, id: Math.random().toString() },
+        {
+          name: userName,
+          email: userEmail,
+          age: userAge,
+          id: Math.random().toString(),
+        },
       ];
     });
   };
@@ -26,10 +31,10 @@ const FormWithOverlay = () => {
           onHandleError={() => setError(null)}
         />
       )}
-      <AddNewUser onAddNewUser={addNewUserHandler} setErrorHandler={setError}/>
+      <AddNewUser onAddNewUser={addNewUserHandler} setErrorHandler={setError} />
       {<ListOfUsers users={listOfUsers} />}
     </>
-  ); 
-}
+  );
+};
 
 export default FormWithOverlay;

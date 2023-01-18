@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 import RegexInput from "./RegexInput";
 
 const AddNewUser = (props) => {
-  const {setErrorHandler} = props;
+  const { setErrorHandler } = props;
   const [enteredUsername, setEnteredUsername] = useState(initUsernameState);
   const [enteredEmail, setEnteredEmail] = useState(initEmailState);
   const [enteredAge, setEnteredAge] = useState(initAgeState);
@@ -38,9 +38,13 @@ const AddNewUser = (props) => {
         message: "Please enter a valid age.",
       });
       return;
-    } 
+    }
 
-    props.onAddNewUser(enteredUsername.value, enteredEmail.value, enteredAge.value);
+    props.onAddNewUser(
+      enteredUsername.value,
+      enteredEmail.value,
+      enteredAge.value
+    );
     setEnteredUsername(initUsernameState);
     setEnteredEmail(initEmailState);
     setEnteredAge(initAgeState);
@@ -49,7 +53,7 @@ const AddNewUser = (props) => {
   const usernameChangeHandler = (event) => {
     const newUsernameValue = event.target.value;
     const validUsername = validateUsername(newUsernameValue);
-    const usernameErrorMessage = validUsername ? null: USERNAME_ERROR_MESSAGE;
+    const usernameErrorMessage = validUsername ? null : USERNAME_ERROR_MESSAGE;
     setEnteredUsername((prevState) => {
       return {
         value: newUsernameValue,
@@ -83,39 +87,39 @@ const AddNewUser = (props) => {
         errorMessage: ageErrorMessage,
       };
     });
-  }; 
+  };
 
   return (
-      <Card className={styles.input}>
-        <form className={styles.form} onSubmit={addNewUserHandler}>
-          <p className={styles.entryMessage}>Please register!</p>
-          <RegexInput
-            labelName={"Username"}
-            inputId={"username"}
-            inputType={"text"}
-            inputValue={enteredUsername.value}
-            inputOnChange={usernameChangeHandler}
-            errorMessage={enteredUsername.errorMessage}
-          />
-          <RegexInput
-            labelName={"E-Mail"}
-            inputId={"e-mail"}
-            inputType={"email"}
-            inputValue={enteredEmail.value}
-            inputOnChange={emailChangeHandler}
-            errorMessage={enteredEmail.errorMessage}
-          />
-          <RegexInput
-            labelName={"Age"}
-            inputId={"age"}
-            inputType={"number"}
-            inputValue={enteredAge.value}
-            inputOnChange={ageChangeHandler}
-            errorMessage={enteredAge.errorMessage}
-          />
-          <Button type="submit">Add User</Button>
-        </form>
-      </Card>
+    <Card className={styles.input}>
+      <form className={styles.form} onSubmit={addNewUserHandler}>
+        <p className={styles.entryMessage}>Sign Up Form</p>
+        <RegexInput
+          labelName={"Username:"}
+          inputId={"username"}
+          inputType={"text"}
+          inputValue={enteredUsername.value}
+          inputOnChange={usernameChangeHandler}
+          errorMessage={enteredUsername.errorMessage}
+        />
+        <RegexInput
+          labelName={"E-Mail:"}
+          inputId={"e-mail"}
+          inputType={"email"}
+          inputValue={enteredEmail.value}
+          inputOnChange={emailChangeHandler}
+          errorMessage={enteredEmail.errorMessage}
+        />
+        <RegexInput
+          labelName={"Age:"}
+          inputId={"age"}
+          inputType={"number"}
+          inputValue={enteredAge.value}
+          inputOnChange={ageChangeHandler}
+          errorMessage={enteredAge.errorMessage}
+        />
+        <Button type="submit">Add User</Button>
+      </form>
+    </Card>
   );
 };
 
@@ -125,7 +129,8 @@ const initUsernameState = {
   errorMessage: null,
 };
 
-const USERNAME_ERROR_MESSAGE = "Please enter a username with 3 up to 15 characters!";
+const USERNAME_ERROR_MESSAGE =
+  "Please enter a username with 3 up to 15 characters!";
 
 const validateUsername = (usernameToValidate) => {
   return usernameToValidate.match(/^[A-Za-z._\-0-9]{3,25}$/);
@@ -153,6 +158,6 @@ const AGE_ERROR_MESSAGE = "Age is not valid!";
 
 const validateAge = (ageToValidate) => {
   return ageToValidate.match(/^([0-9]|[1-9][0-9])$/);
-}; 
+};
 
 export default AddNewUser;
