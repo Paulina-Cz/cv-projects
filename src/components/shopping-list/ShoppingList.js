@@ -36,7 +36,7 @@ const ShoppingList = () => {
 
   return (
     <>
-      <section id="shopping-form">
+      <section className={styles.shoppingFormLayout} id="shopping-form" >
         <InputField onAddShoppingItem={addShoppingItemHandler}/>
       </section>
       <section id="shopping-list">{content}</section>
