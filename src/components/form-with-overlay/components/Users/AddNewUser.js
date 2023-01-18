@@ -90,7 +90,8 @@ const AddNewUser = (props) => {
   };
 
   return (
-    <Card className={styles.input}>
+    <Card>
+      <div className={styles.input}>
       <form className={styles.form} onSubmit={addNewUserHandler}>
         <p className={styles.entryMessage}>Sign Up Form</p>
         <RegexInput
@@ -119,6 +120,7 @@ const AddNewUser = (props) => {
         />
         <Button type="submit">Add User</Button>
       </form>
+      </div>
     </Card>
   );
 };

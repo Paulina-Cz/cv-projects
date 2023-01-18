@@ -23,7 +23,7 @@ const FormWithOverlay = () => {
   };
 
   return (
-    <>
+    <div className={styles.formWithOverlayLayout}> 
       {error && (
         <ErrorOverlay
           title={error.title}
@@ -31,9 +31,9 @@ const FormWithOverlay = () => {
           onHandleError={() => setError(null)}
         />
       )}
-      <AddNewUser onAddNewUser={addNewUserHandler} setErrorHandler={setError} />
+      <AddNewUser onAddNewUser={addNewUserHandler} setErrorHandler={setError}/>
       {<ListOfUsers users={listOfUsers} />}
-    </>
+      </div>
   );
 };
 
