@@ -4,19 +4,19 @@
   max-width: 40rem;
 }
 
-.form-input {
+.formInput {
   background-color: white;
   margin: 0.7rem 0;
 }
 
-.form-input p {
+.formInput p {
   background-color: white;
   color: rgb(255, 153, 0);
   font-size: 1.7rem;
   font-weight: 700;
 }
 
-.form-input label {
+.formInput label {
   background-color: white;
   font-size: 1.2rem;
   font-weight: 600;
@@ -24,7 +24,7 @@
   margin-bottom: 0.7rem;
 }
 
-.form-input input {
+.formInput input {
   background-color: white;
   display: block;
   width: 100%;
@@ -37,11 +37,11 @@
   padding: 0 0.3rem;
 }
 
-.form-input.invalid input {
+.formInput.invalid input {
   border-color: rgb(240, 28, 28);
   background: #ffd7d7;
 }
 
-.form-input.invalid label {
+.formInput.invalid label {
   color: rgb(240, 28, 28);
 }

@@ -28,7 +28,7 @@ const InputField = (props) => {
     <Card>
       <form onSubmit={formSubmitHandler} className={styles.form}>
         <div
-          className={`${styles["form-input"]} ${!isValid && styles.invalid}`}
+          className={`${styles["formInput"]} ${!isValid && styles.invalid}`}
         >
           <p>Shopping List</p>
           <label> Enter a shopping Item:</label>

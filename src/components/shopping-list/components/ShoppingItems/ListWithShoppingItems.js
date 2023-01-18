@@ -4,7 +4,7 @@ import styles from "./ListWithShoppingItems.module.css";
 
 const ListWithShoppingItems = (props) => {
   return (
-    <ul className={styles.shoppinglist}>
+    <ul className={styles.shoppingList}>
       {props.items.map((newitem) => (
         <ShoppingItem
           key={newitem.id}

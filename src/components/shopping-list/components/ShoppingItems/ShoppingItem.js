@@ -3,7 +3,7 @@ import styles from "./ShoppingItem.module.css";
 
 const ShoppingItem = (props) => {
   return (
-    <li className={styles.shoppingitem} onClick={props.onDelete}>
+    <li className={styles.shoppingItem} onClick={props.onDelete}>
       {props.children}
     </li>
   );
