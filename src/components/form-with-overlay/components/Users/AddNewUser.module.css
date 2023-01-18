@@ -1,3 +1,8 @@
+.buttonLayoutForm {
+  background: #9e2383;
+  border: 0.063rem solid #9e2383;
+}
+
 .form {
   background-color: white;
   padding-top: 0.1rem;
@@ -6,7 +11,7 @@
 
 .entryMessage {
   background-color: white;
-  color: #266f80;
+  color: #fd4c6a;
   font-size: 1.7rem;
   font-weight: 700;
 }
