@@ -1,5 +1,5 @@
 .users {
-  margin: 0 auto;
+  margin-top: 1rem;
   max-width: 45rem;
   width: 80%;
 }
@@ -18,6 +18,7 @@
   border-radius: 0.438rem;
   font-size: 1rem;
   font-weight: 400;
-  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0.3rem;
 }

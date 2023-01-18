@@ -1,6 +1,6 @@
 .shoppingList {
   list-style-type: none;
-  margin: 0;
+  margin-top: 1rem;
   padding: 0;
   text-align: center;
 }

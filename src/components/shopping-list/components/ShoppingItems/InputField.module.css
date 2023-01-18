@@ -1,6 +1,7 @@
 .form {
   background-color: white;
-  padding: 0;
+  padding-top: 0.1rem;
+  padding-bottom: 1.5rem;
 }
 
 .formInput {
@@ -20,20 +21,21 @@
   font-size: 1.2rem;
   font-weight: 600;
   display: block;
-  margin-bottom: 0.7rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 
 .formInput input {
   background-color: white;
-  display: block;
-  width: 100%;
   border: 0.063rem solid #ccc;
   border-radius: 0.4375rem;
+  display: block;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  padding: 0;
+  padding: 0.25rem;
+  width: 100%;
 }
 
 .formInput.invalid input {
