@@ -1,0 +1,55 @@
+.backdrop {
+  background: rgba(0, 0, 0, 0.801);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.content {
+  background: rgb(255, 255, 255);
+  padding: 1.5rem;
+}
+
+.content p {
+  background: white;
+}
+
+.footer {
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.header {
+  background: #fd4c6a;
+  padding: 1.5rem;
+}
+
+.header h2 {
+  background: #fd4c6a;
+  color: white;
+  margin: 0;
+}
+
+.overlay {
+  left: 10%;
+  margin: 0 auto;
+  max-width: 30rem;
+  overflow: auto;
+  padding: 0;
+  position: absolute;
+  top: 25vh;
+  width: 80%;
+  z-index: 10;
+}
+
+@media (min-width: 48rem) {
+  .overlay {
+    left: calc(50% - 15rem);
+    width: 30rem;
+  }
+}
